@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<metacharset="UTF-8">
+	<metahttp-equiv="X-UA-Compatible"content="IE=edge">
+	<metaname="viewport"content="width=device-width,initial-scale=1.0">
+	<title>Email JS</title>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+	<script type="text/javascript">
+	    function sendEmail(){
+	//event.preventDefault();
+	Email.send({
+		SecureToken:
+"0e1f9ce6-6fed-4ac0-93b1-462b3eae3371",
+		To:'w3tutodev@gmail.com',
+		From:"naithai.phang@gmail.com",
+		Subject:"Test",
+		Body:"Corps du formulaire",
+	})
+	.then(function(message){	
+		alert("Email envoyé")
+		});
+	}</script>
+</head>
+<body>
+	<form method="post">
+		<input type="button"value="Send Email"onclick="sendEmail()"/>
+	</form>
+</body>
+</html>
